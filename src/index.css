@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: url('\picccc.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+
+/* dark mode looking scrollbar */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
+body {
+  @apply font-poppins text-white text-base;
+}
+
+.user-name {
+  @apply text-xl font-semibold text-white font-sans tracking-wide;
+}
+
+.avatar {
+  position: relative;
+  display: inline-block;
+}
+
+
+.avatar.online::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #4ade80; /* Tailwind green-400 */
+  border: 2px solid white;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
